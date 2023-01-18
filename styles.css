@@ -143,6 +143,10 @@ line-height: 30px;
 color: #636060;
 }
 
+.section2-img-small {
+  display: none;
+}
+
 .section3 {
   padding: 20px 109px 121px 109px;
   background: #EDF2EC;
@@ -414,6 +418,11 @@ display: flex;
   justify-items: center;
 }
 
+.section5-div-img-small {
+  display: none;
+}
+
+
 .h2-sec5 {
   font-family: 'Inika';
 font-style: normal;
@@ -580,11 +589,115 @@ border-radius: 20px;
 display: none;
 z-index: 1;
 position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+margin: auto;
 }
 
 .adress:target {display: block;}
+
+@media (max-width:767px)  {
+  ul {
+    display: none;
+  }
+
+  .section1, .section2, .section3, .section4, .section5, nav {
+    padding: 35px 25px;
+  }
+
+
+.section1-div, .section2-div, .section5-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section1-img, .section2-img {
+  display: none;
+}
+.section2-img-small {
+  display: inline;
+}
+
+.section3-div {
+  grid-template: none;
+
+    grid-template-areas:
+        "item1"
+        "item8"
+        "item2"
+        "item3"
+        "item4"
+        "item5";
+        display: grid;
+        justify-content: center;
+}
+
+.item8 {
+    grid-area: item8;
+    display: flex;
+    flex-direction: column;
+}
+
+.item6, .item7 {
+  display: none;
+}
+
+.section4-div {
+    margin: 0 auto;
+    display: flex;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    justify-content: center;
+  }
+
+.our-best, .prices {
+  font-size: 35px;
+}
+
+.section4-div-right-img {
+  margin-bottom: 110px;
+}
+
+
+.dropbtn-sec5 {
+  margin-top: 60px;
+}
+
+.our-best {
+  display: none;
+}
+.section4 {
+  padding-top: 40px;
+  padding-bottom: 45px;
+}
+
+.section5 {
+  padding: 35px 25px 0 25px;
+
+}
+
+.section5-div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: flex-end;
+    row-gap: 65px;
+    justify-content: space-between;
+}
+
+.section5-div-img {
+  display: none;
+}
+
+.section5-div-img-small {
+  display: inline;
+}
+
+.dropbtn-sec5 {
+  width: 250px;
+}
+
+footer {
+  padding: 0 25px;
+}
+
+}
